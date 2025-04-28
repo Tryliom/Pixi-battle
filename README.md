@@ -1,10 +1,22 @@
-# Install WSL 2
+# Pixi battle
+This is a discord bot created in C++ that runs a turn by turn game by creating and sending them as gif to the user.
+
+## Context
+When I started to make discord bots, I discovered that we could create an image live, so I thought it would be possible to use gif to create a more real game.
+
+But in the end, I stopped it because it's taking too much time and I need to create a custom engine to make it work.
+So I left it public so if someone wants to continue it, they can.
+
+Technically, the bot works, but needs more development and content.
+
+## Development
+### Install WSL 2
 
 Install wsl2 from Windows store (Ubuntu 22.04)
 
-# Install libs
+### Install libs
 
-## Setup
+#### Setup
 
 ```
 sudo apt-get update && sudo apt-get upgrade
@@ -16,7 +28,7 @@ Reboot
 sudo apt-get install -y libopus0 g++ cmake pkg-config p7zip-full zlib1g zlib1g-dev
 ```
 
-## Setup CLion
+#### Setup CLion
 
 In wsl, install gdb and gcc
 
@@ -24,11 +36,11 @@ In wsl, install gdb and gcc
 sudo apt install -y gcc gdb
 ```
 
-Go in CLion -> settings -> Build, execution, .. -> toolchains, add a new one.
+Go to CLion → settings → Build, execution, → toolchains, add a new one.
 
 Select WSL.
 
-## Install OpenSSL 3
+#### Install OpenSSL 3
 
 Check the latest version with this command:
 
@@ -75,7 +87,7 @@ source /etc/environment
 echo $PATH
 ```
 
-## Install DPP
+#### Install DPP
 
 ```
 cd ~
@@ -83,7 +95,7 @@ wget -O libdpp.deb https://dl.dpp.dev/latest
 sudo dpkg -i libdpp.deb
 ```
 
-## Install GraphicsMagick
+#### Install GraphicsMagick
 
 Need to install jxl before
 
@@ -110,9 +122,9 @@ make && sudo make install
 sudo ldconfig
 ```
 
-## Error fix
+#### Error fix
 
-### libcuda.so.1 is not a symbolic link on WSL2
+##### libcuda.so.1 is not a symbolic link on WSL2
 
 Open powershell as admin and run `cmd` or cmd in admin mod
 
